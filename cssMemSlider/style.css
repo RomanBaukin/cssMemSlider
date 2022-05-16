@@ -102,6 +102,10 @@ body {
   opacity: 0.8;
 }
 
+.button:active {
+  transform: scale(1.2);
+}
+
 #pag1:checked~.bottom-block .controls .button1,
 #pag2:checked~.bottom-block .controls .button2,
 #pag3:checked~.bottom-block .controls .button3,
