@@ -39,23 +39,23 @@ body {
 }
 
 .slider {
-  width: 800px;
-  height: 500px;
+  width: 70%;
+  height: 50rem;
   overflow: hidden;
   margin: 0 auto;
   background-color: #ffffff;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .slides {
   width: 500%;
-  height: 400px;
+  height: 40rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .slide {
@@ -80,18 +80,18 @@ body {
 
 .controls {
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 .pagination {
   border-radius: 50%;
-  padding: 10px;
+  padding: 1rem;
   cursor: pointer;
 }
 
 .button {
-  width: 15px;
-  height: 15px;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: grey;
   border-radius: 50%;
   transition: all 0.4s ease;
@@ -112,7 +112,7 @@ body {
 #pag4:checked~.bottom-block .controls .button4,
 #pag5:checked~.bottom-block .controls .button5 {
   background-color: #ffffff;
-  border: 2px solid grey;
+  border: 0.2rem solid grey;
 }
 
 input {
@@ -172,16 +172,15 @@ input {
   }
 
   .slider {
-    width: 600px;
-    height: 400px;
+    height: 40rem;
   }
 
   .slides {
-    height: 250px;
+    height: 25rem;
   }
 
   .bottom-block {
     flex-direction: column-reverse;
-    gap: 15px;
+    gap: 1.5rem;
   }
 }
