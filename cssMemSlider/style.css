@@ -1,0 +1,186 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./assets/fonts/Roboto-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.6rem;
+  background-image: url('./assets/images/bg-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.slider {
+  width: 70%;
+  height: 50rem;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.slides {
+  width: 500%;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  margin-bottom: 2rem;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.bottom-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination {
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.button {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: grey;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.button:active {
+  transform: scale(1.2);
+}
+
+#pag1:checked~.bottom-block .controls .button1,
+#pag2:checked~.bottom-block .controls .button2,
+#pag3:checked~.bottom-block .controls .button3,
+#pag4:checked~.bottom-block .controls .button4,
+#pag5:checked~.bottom-block .controls .button5 {
+  background-color: #ffffff;
+  border: 0.2rem solid grey;
+}
+
+input {
+  display: none;
+}
+
+#pag1:checked~.slides {
+  margin-left: 0%;
+}
+
+#pag2:checked~.slides {
+  margin-left: -100%;
+}
+
+#pag3:checked~.slides {
+  margin-left: -200%;
+}
+
+#pag4:checked~.slides {
+  margin-left: -300%;
+}
+
+#pag5:checked~.slides {
+  margin-left: -400%;
+}
+
+.descriptions {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 70%;
+}
+
+.descr1,
+.descr2,
+.descr3,
+.descr4,
+.descr5 {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s linear;
+  height: 0;
+}
+
+#pag1:checked~.bottom-block .descriptions .descr1,
+#pag2:checked~.bottom-block .descriptions .descr2,
+#pag3:checked~.bottom-block .descriptions .descr3,
+#pag4:checked~.bottom-block .descriptions .descr4,
+#pag5:checked~.bottom-block .descriptions .descr5 {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .slider {
+    height: 40rem;
+  }
+
+  .slides {
+    height: 25rem;
+  }
+
+  .bottom-block {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+}
